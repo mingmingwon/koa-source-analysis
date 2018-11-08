@@ -15,3 +15,7 @@ assert(isGeneratorFunction(function* () { yield 42; return Infinity; })); // tru
 
 ## 测试
 克隆[本仓库](https://github.com/ljharb/is-generator-function)，执行 `npm install`，然后 `npm test`。
+
+## 译者
+
+- [Jordan Wang](https://github.com/mingmingwon/)

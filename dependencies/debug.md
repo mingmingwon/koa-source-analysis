@@ -12,7 +12,7 @@ $ npm install debug
 
 ## 使用
 
-`debug` 暴露了一个函数；只需将模块名称传给此函数，它将返回一个装饰后的 `console.error`，供你传递调试语句。这将允许你切换模块的不同部分以及整个模块的调试输出。
+`debug` 暴露了一个函数；只需将模块名称传给此函数，它将返回一个对 `console.error` 封装后的函数，用以传递调试语句。这将允许你切换模块的不同部分以及整个模块的调试输出。
 
 例子 [app.js](https://github.com/visionmedia/debug/blob/master/examples/node/app.js)：
 
@@ -58,11 +58,7 @@ function workb() {
 workb();
 ```
 
-The `DEBUG` environment variable is used to enable these based on space or comma-delimited names.
-
-Here are some examples:
-
-使用 `DEBUG` 环境变量启用这些以空格或逗号分隔的名称。
+使用 `DEBUG` 环境变量启用这些以空格或逗号分隔的名字。
 
 这里有些例子：
 
@@ -88,7 +84,7 @@ set DEBUG=* & node app.js
 
 ##### PowerShell (Visual Studio Code 默认使用)
 
-PowerShell 使用不同的语法设置环境变量。
+PowerShell 设置环境变量的语法和 CMD 不同。
 
 ```cmd
 $env:DEBUG="*,-not_this"
@@ -105,32 +101,32 @@ $env:DEBUG='app';node app.js
 npm 脚本例子：
 
 ```js
-  "windowsDebug": "@powershell -Command $env:DEBUG='*';node app.js",
+"windowsDebug": "@powershell -Command $env:DEBUG='*';node app.js",
 ```
 
 ## 命名空间颜色
 
-每个调试实例都拥有一个根据其命名空间生成的颜色。这样有助于在可视化解析调试输出时识别调试行属于哪个调试实例。
+每个调试实例都有一个根据其命名空间生成的颜色。这样有助于在可视化解析调试输出时识别调试行属于哪个调试实例。
 
 #### Node.js
 
-在 Node.js 中，stderr 是 TTY 时启用颜色。安装 debug 模块的同时，也应该安装 [`supports-color`](https://npmjs.org/supports-color) 模块，否则调试只会使用少量的基本颜色。
+在 Node.js 中，stderr 是 TTY 时启用颜色。安装 debug 模块的同时，也应该安装 [`supports-color`](https://npmjs.org/supports-color) 模块，否则调试输出只会使用少量的基本颜色。
 
 <img src="https://user-images.githubusercontent.com/71256/29092181-47f6a9e6-7c3a-11e7-9a14-1928d8a711cd.png" width="647">
 
 #### Web Browser
 
-在 Web 解析器能解析 `%c` 格式化选项时启用颜色。包括 WebKit 解析器，Firefox（[31 版本以上](https://hacks.mozilla.org/2014/05/editable-box-model-multiple-selection-sublime-text-keys-much-more-firefox-developer-tools-episode-31/)）和 Firefox（任何版本）的 Firebug 插件。
+在 Web 解析器能解析 `%c` 格式化选项时启用颜色。解析器包括 WebKit，Firefox（[31 版本以上](https://hacks.mozilla.org/2014/05/editable-box-model-multiple-selection-sublime-text-keys-much-more-firefox-developer-tools-episode-31/)）和 Firefox（任何版本）的 Firebug 插件。
 
 <img src="https://user-images.githubusercontent.com/71256/29092033-b65f9f2e-7c39-11e7-8e32-f6f0d8e865c1.png" width="647">
 
 ## 毫秒差
 
-在积极开发应用程序时，查看一个 `debug()` 调用和下一个调用之间的耗时是很有用的。假设在请求资源之前调用 `debug()`，在得到资源之后也调用 `debug()`，那么 `+NNNms` 将显示调用所消耗的时间。
+在开发应用程序时，查看一个 `debug()` 调用和下一个 `debug()` 调用之间的耗时是很有用的。假设在请求资源之前调用一下 `debug()`，在得到资源之后也调用一下 `debug()`，那么 `+NNNms` 表示请求资源所消耗的时间。
 
 <img src="https://user-images.githubusercontent.com/71256/29091486-fa38524c-7c37-11e7-895f-e7ec8e1039b6.png" width="647">
 
-当 stdout 不是 TTY 时，使用 `Date＃toISOString()` 对于记录调试信息更有用，如下所示：
+当 stdout 不是 TTY 时，使用 `Date#toISOString()` 对于记录调试信息更有用，如下所示：
 
 <img src="https://user-images.githubusercontent.com/71256/29091956-6bd78372-7c39-11e7-8c55-c948396d6edd.png" width="647">
 
@@ -140,10 +136,9 @@ npm 脚本例子：
 
 ## 通配符
 
-`*` 字符可以用作通配符。假设库中有
-名字为 "connect:bodyParser"，"connect:compress"，"connect:session" 的调试器，不必像这样 `DEBUG=connect:bodyParser,connect:compress,connect:session` 列出所有的调试器，而只需 `DEBUG=connect:*` 这样即可，或使用 `DEBUG=*` 运行所有模块。
+`*` 字符可以用作通配符。假设库中有名字为 "connect:bodyParser"，"connect:compress"，"connect:session" 的调试器，不必像这样 `DEBUG=connect:bodyParser,connect:compress,connect:session` 列出所有的调试器，只需 `DEBUG=connect:*` 这样即可，或使用 `DEBUG=*` 运行所有模块。
 
-还可以通过添加前缀 "-" 字符来排除特定的调试器。例如，`DEBUG=*,-connect:*` 将包含除了以 "connect:" 开头之外的所有调试器。
+还可以通过添加前缀 "-" 字符来排除特定的调试器。例如，`DEBUG=*,-connect:*` 将包含除了以 "connect:" 开头的所有调试器。
 
 ## 环境变量
 
@@ -152,7 +147,7 @@ npm 脚本例子：
 | 名字                | 作用                               |
 |---------------------|------------------------------------|
 | `DEBUG`             | 启用/禁用特定的调试命名空间。      |
-| `DEBUG_HIDE_DATE`   | 隐藏调试输出中的日期（non-TTY）。  |
+| `DEBUG_HIDE_DATE`   | 隐藏调试输出中的日期（非TTY）。  |
 | `DEBUG_COLORS`      | 是否在调试输出中使用颜色。         |
 | `DEBUG_DEPTH`       | 对象检查深度。                     |
 | `DEBUG_SHOW_HIDDEN` | 显示被检查对象的隐藏属性。         |
@@ -161,12 +156,12 @@ npm 脚本例子：
 
 ## 格式符
 
-调试使用 [printf-style](https://wikipedia.org/wiki/Printf_format_string) 格式，下面是官方支持的格式符：
+调试使用 [printf-style](https://wikipedia.org/wiki/Printf_format_string) 格式，以下是官方支持的格式符：
 
 | 格式符    | 展示                            |
 |-----------|---------------------------------|
-| `%O`      | 在多行上打印一个对象。          |
-| `%o`      | 在单行上打印一个对象。          |
+| `%O`      | 多行打印一个对象。              |
+| `%o`      | 单行打印一个对象。              |
 | `%s`      | 字符串。                        |
 | `%d`      | 数字 (包含整型和浮点型)。       |
 | `%j`      | JSON。如果包含循环引用，则使用 '[Circular]' 字符串代替。|
@@ -193,7 +188,7 @@ debug('this is hex: %h', new Buffer('hello world'))
 
 可以使用 [browserify](https://github.com/substack/node-browserify) 构建浏览器端就绪的脚本，或者如果不想自己构建的话，可以只使用 [browserify-as-a-service](https://wzrd.in/) [build](https://wzrd.in/standalone/debug@latest)。 
 
-Debug 的启用状态目前由 `localStorage` 持久化。考虑此种有 `worker:a` 和 `worker:b` 并希望同时调试两者的情况。可以使用 `localStorage.debug` 来启用此操作：
+Debug 的启用状态目前由 `localStorage` 持久化。考虑这种存在 `worker:a` 和 `worker:b` 并希望同时调试两者的情况。可以使用 `localStorage.debug` 来启用此操作：
 
 ```js
 localStorage.debug = 'worker:*'
@@ -216,7 +211,7 @@ setInterval(function(){
 
 ## 输出流
 
-默认情况下，`debug` 会输出到 stderr，但是可以通过重写 `log` 方法来为每个命名空间配置输出： 
+默认情况下，`debug` 会输出到 stderr，但是可以通过重写 `log` 方法来为每个命名空间配置不同的输出： 
 
 例子 [stdout.js](https://github.com/visionmedia/debug/blob/master/examples/node/stdout.js)：
 
@@ -285,7 +280,7 @@ console.log(3, debug.enabled('test'));
 
 namespaces 可以包括由冒号分隔的模式和通配符。
 
-注意，调用 `enable()` 会完全覆盖先前设置的 DEBUG 变量：
+注意，调用 `enable()` 会完全覆盖先前设置的 DEBUG 环境变量：
 
 ```
 $ DEBUG=foo node -e 'var dbg = require("debug"); dbg.enable("bar"); console.log(dbg.enabled("foo"))'
@@ -294,7 +289,7 @@ $ DEBUG=foo node -e 'var dbg = require("debug"); dbg.enable("bar"); console.log(
 
 `disable()`
 
-将会禁用所有名称空间。函数返回当前启用（和跳过）的命名空间。 如果不知道启动的内容想要暂时禁用调试时，它可能很有用。
+将会禁用所有名称空间。函数返回当前启用（和跳过）的命名空间。 如果不知道启动的内容想要暂时禁用调试时，它就很有用。
 
 例如：
 
@@ -309,9 +304,9 @@ debug.enable(namespaces);
 
 ## 检查调试目标是否启用调试
 
-在创建调试实例后，可以通过检查 `enabled` 属性判断它是否是启用调试：
+在创建调试实例后，可以通过检查 `enabled` 属性判断其是否启用调试：
 
-```javascript
+```js
 const debug = require('debug')('http');
 
 if (debug.enabled) {
@@ -323,6 +318,10 @@ if (debug.enabled) {
 
 ## 作者
 
- - TJ Holowaychuk
- - Nathan Rajlich
- - Andrew Rhyne
+- TJ Holowaychuk
+- Nathan Rajlich
+- Andrew Rhyne
+
+## 译者
+
+- [Jordan Wang](https://github.com/mingmingwon/)
