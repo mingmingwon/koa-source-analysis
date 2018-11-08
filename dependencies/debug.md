@@ -1,6 +1,6 @@
 # debug <sup>[![Version Badge](http://versionbadg.es/visionmedia/debug.svg)](https://www.npmjs.com/package/debug)</sup>
 
-![截图1](https://user-images.githubusercontent.com/71256/29091486-fa38524c-7c37-11e7-895f-e7ec8e1039b6.png)
+<img src="https://user-images.githubusercontent.com/71256/29091486-fa38524c-7c37-11e7-895f-e7ec8e1039b6.png" width="647">
 
 一个微型的 JavaScript 调试工具，以 Node.js 核心的调试技术为模型。适用于 Node.js 和 Web Browser。
 
@@ -66,9 +66,9 @@ Here are some examples:
 
 这里有些例子：
 
-![截图2](https://user-images.githubusercontent.com/71256/29091703-a6302cdc-7c38-11e7-8304-7c0b3bc600cd.png)
-![截图3](https://user-images.githubusercontent.com/71256/29091700-a62a6888-7c38-11e7-800b-db911291ca2b.png)
-![截图4](https://user-images.githubusercontent.com/71256/29091701-a62ea114-7c38-11e7-826a-2692bedca740.png)
+<img src="(https://user-images.githubusercontent.com/71256/29091703-a6302cdc-7c38-11e7-8304-7c0b3bc600cd.png" width="647">
+<img src="https://user-images.githubusercontent.com/71256/29091700-a62a6888-7c38-11e7-800b-db911291ca2b.png" width="647">
+<img src="https://user-images.githubusercontent.com/71256/29091701-a62ea114-7c38-11e7-826a-2692bedca740.png" width="647">
 
 ### Windows 命令提示符说明
 
@@ -116,23 +116,23 @@ npm 脚本例子：
 
 在 Node.js 中，stderr 是 TTY 时启用颜色。安装 debug 模块的同时，也应该安装 [`supports-color`](https://npmjs.org/supports-color) 模块，否则调试只会使用少量的基本颜色。
 
-![截图5](https://user-images.githubusercontent.com/71256/29092181-47f6a9e6-7c3a-11e7-9a14-1928d8a711cd.png)
+<img src="https://user-images.githubusercontent.com/71256/29092181-47f6a9e6-7c3a-11e7-9a14-1928d8a711cd.png" width="647">
 
 #### Web Browser
 
 在 Web 解析器能解析 `%c` 格式化选项时启用颜色。包括 WebKit 解析器，Firefox（[31 版本以上](https://hacks.mozilla.org/2014/05/editable-box-model-multiple-selection-sublime-text-keys-much-more-firefox-developer-tools-episode-31/)）和 Firefox（任何版本）的 Firebug 插件。
 
-![截图6](https://user-images.githubusercontent.com/71256/29092033-b65f9f2e-7c39-11e7-8e32-f6f0d8e865c1.png)
+<img src="https://user-images.githubusercontent.com/71256/29092033-b65f9f2e-7c39-11e7-8e32-f6f0d8e865c1.png" width="647">
 
 ## 毫秒差
 
 在积极开发应用程序时，查看一个 `debug()` 调用和下一个调用之间的耗时是很有用的。假设在请求资源之前调用 `debug()`，在得到资源之后也调用 `debug()`，那么 `+NNNms` 将显示调用所消耗的时间。
 
-![截图7](https://user-images.githubusercontent.com/71256/29091486-fa38524c-7c37-11e7-895f-e7ec8e1039b6.png)
+<img src="https://user-images.githubusercontent.com/71256/29091486-fa38524c-7c37-11e7-895f-e7ec8e1039b6.png" width="647">
 
 当 stdout 不是 TTY 时，使用 `Date＃toISOString()` 对于记录调试信息更有用，如下所示：
 
-![截图8](https://user-images.githubusercontent.com/71256/29091956-6bd78372-7c39-11e7-8c55-c948396d6edd.png)
+<img src="https://user-images.githubusercontent.com/71256/29091956-6bd78372-7c39-11e7-8c55-c948396d6edd.png" width="647">
 
 ## 规则
 
