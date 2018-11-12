@@ -102,7 +102,7 @@ $ TRACE_DEPRECATION=my-module,othermod node app.js
 
 **注意** 这不会追踪对被 `NO_DEPRECATION` 禁止的弃用。
 
-## 显示
+## [显示](#display)
 
 ![message](https://github.com/dougwilson/nodejs-depd/raw/master/files/message.png)
 
@@ -122,7 +122,7 @@ namespace      |          |           location of mycoolmod.oldfunction() call
                the word "deprecated"
 ```
 
-如果用户将 STDERR 重定向到文件或不支持颜色，他们看到（与 `debug` 模块的布局类似）：
+如果用户将 STDERR 重定向到文件或不支持颜色的环境，他们将看到（与 `debug` 模块的布局类似）：
 
 ```
 Sun, 15 Jun 2014 05:21:37 GMT my-cool-module deprecated oldfunction at [eval]-wrapper:6:22
