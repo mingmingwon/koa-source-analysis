@@ -4,7 +4,7 @@
 
 判断函数是否为原生 generator 函数。
 
-## 例子
+## 示例
 
 ```js
 var isGeneratorFunction = require('is-generator-function');
@@ -18,4 +18,4 @@ assert(isGeneratorFunction(function* () { yield 42; return Infinity; })); // tru
 
 ## 译者
 
-- [Jordan Wang](https://github.com/mingmingwon/)
+[Jordan Wang](https://github.com/mingmingwon/)

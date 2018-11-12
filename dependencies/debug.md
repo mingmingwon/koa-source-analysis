@@ -14,7 +14,7 @@ $ npm install debug
 
 `debug` 暴露了一个函数；只需将模块名称传给此函数，它将返回一个对 `console.error` 封装后的函数，用以传递调试语句。这将允许你切换模块的不同部分以及整个模块的调试输出。
 
-例子 [app.js](https://github.com/visionmedia/debug/blob/master/examples/node/app.js)：
+示例 [app.js](https://github.com/visionmedia/debug/blob/master/examples/node/app.js)：
 
 ```js
 var debug = require('debug')('http')
@@ -37,7 +37,7 @@ http.createServer(function(req, res){
 require('./worker');
 ```
 
-例子 [worker.js](https://github.com/visionmedia/debug/blob/master/examples/node/_worker.js)：
+示例 [worker.js](https://github.com/visionmedia/debug/blob/master/examples/node/_worker.js)：
 
 ```js
 var a = require('debug')('worker:a')
@@ -213,7 +213,7 @@ setInterval(function(){
 
 默认情况下，`debug` 会输出到 stderr，但是可以通过重写 `log` 方法来为每个命名空间配置不同的输出： 
 
-例子 [stdout.js](https://github.com/visionmedia/debug/blob/master/examples/node/stdout.js)：
+示例 [stdout.js](https://github.com/visionmedia/debug/blob/master/examples/node/stdout.js)：
 
 ```js
 var debug = require('debug');
@@ -324,4 +324,4 @@ if (debug.enabled) {
 
 ## 译者
 
-- [Jordan Wang](https://github.com/mingmingwon/)
+[Jordan Wang](https://github.com/mingmingwon/)
