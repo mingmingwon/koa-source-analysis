@@ -137,7 +137,7 @@ timestamp of message          namespace      |          |             location o
 
 ### 弃用对函数的所有调用
 
-将在 STDERR 中显示 "my-cool-module" 中有关弃用 "oldfunction" 函数的弃用消息。（原文中 "my-module" 为笔误，以下示例代码中的命名空间均是 "my-cool-module"，已提 [pull request](https://github.com/dougwilson/nodejs-depd/pull/31)）
+将在 STDERR 中显示 "my-cool-module" 中有关被弃用函数 "oldfunction" 的弃用消息。（原文中 "my-module" 为笔误，以下示例代码中的命名空间均是 "my-cool-module"，已提 [pull request](https://github.com/dougwilson/nodejs-depd/pull/31)）
 
 ```js
 var deprecate = require('depd')('my-cool-module')
@@ -156,7 +156,7 @@ exports.oldfunction = deprecate.function(function () {
 
 ### 有条件的弃用函数调用
 
-当调用少于 2 个参数时候，将在 STDERR 中显示 "my-cool-module" 中有关 "weirdfunction" 弃用函数的弃用消息。
+当调用少于 2 个参数时候，将在 STDERR 中显示 "my-cool-module" 中有关被弃用函数 "weirdfunction" 的弃用消息。
 
 ```js
 var deprecate = require('depd')('my-cool-module')
@@ -187,7 +187,7 @@ exports.weirdfunction = function () {
 
 ### 弃用属性访问
 
-将在 STDERR 中显示 "my-cool-module" 中有关 "weirdfunction" 弃用函数的弃用消息。当设置该值和获取该值时将显示弃用消息。
+将在 STDERR 中显示 "my-cool-module" 中有关被弃用属性 "oldprop" 的弃用消息。当设置该值和获取该值时将显示弃用消息。
 
 ```js
 var deprecate = require('depd')('my-cool-module')
