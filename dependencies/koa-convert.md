@@ -2,11 +2,11 @@
 
 将 Koa 旧版（0.x 和 1.x）generator 中间件转换为现代版 promise 中间件（2.x）。
 
-它还可以将现代版 promise 中间件转换回旧版的 generator 中间件（有助于帮助现代版中间件支持 koa 0.x 或 1.x）。
+它还可以将现代版 promise 中间件转换回旧版 generator 中间件（有助于帮助现代版中间件支持 koa 0.x 或 1.x）。
 
 ## 注意
 
-路由器中间件是特例。因为它在内部重新实现了中间件组合，所以我们不能简单地转换它。
+路由中间件是特例。因为它在内部重新实现了中间件组合，所以我们不能简单地转换它。
 
 可以使用下面的包实现路由，它们已适用于 koa 2.x 版本：
 
@@ -50,13 +50,13 @@ function modernMiddleware (ctx, next) {
 
 ## 区分旧版和新版中间件
 
-在 koa 0.x 和 1.x（没有实验标志）中 `app.use` 有一个断言，即所有（旧版）中间件必须是 generator 函数，并使用 `fn.constructor.name =='GeneratorFunction'` 进行检测，代码在 [这里](https://github.com/koajs/koa/blob/7fe29d92f1e826d9ce36029e1b9263b94cba8a7c/lib/application.js#L105)。
+在 koa 0.x 和 1.x（没有实验标志）中 `app.use` 有一个断言，即所有（旧版）中间件必须是 generator 函数，并使用 `fn.constructor.name == 'GeneratorFunction'` 进行检测，代码在 [这里](https://github.com/koajs/koa/blob/7fe29d92f1e826d9ce36029e1b9263b94cba8a7c/lib/application.js#L105)。
 
 因此，可以通过 `fn.constructor.name == 'GeneratorFunction'` 来区分旧版和现代版中间件。
 
 ## 迁移
 
-`app.use(legacyMiddleware)` 在 0.x 和 1.x 中无处不在（意思是很多地方使用），将它们全部手动更改为 `app.use(convert(legacyMiddleware))` 会很痛苦。
+`app.use(legacyMiddleware)` 在 0.x 和 1.x 中无处不在（意思是很多地方在使用），将它们全部手动更改为 `app.use(convert(legacyMiddleware))` 会很痛苦。
 
 可以使用以下代码片段来简化迁移。
 
@@ -69,7 +69,7 @@ app.use = x => _use.call(app, convert(x))
 
 因此，在 0.x 和 1.x 中可以同时拥有 `app.use(modernMiddleware)` 和 `app.use(legacyMiddleware)` ，而无需修改即可使用。
 
-Complete example:
+完整示例:
 
 ```js
 const Koa = require('koa') // v2.x
@@ -124,7 +124,7 @@ composedModernMiddleware = convert.compose([legacyMiddleware, modernMiddleware])
 
 #### `convert.back()`
 
-将现代版 promise 中间件转换为旧版 generator 中间件。
+将现代版 promise 中间件转换回旧版 generator 中间件。
 
 有助于帮助现代版 promise 中间件支持 koa 0.x 或 1.x。
 
