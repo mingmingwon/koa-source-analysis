@@ -20,7 +20,7 @@ $ npm install depd
 var deprecate = require('depd')('my-module')
 ```
 
-此库可以用来向用户显示弃用消息。
+此库可以用来向用户显示弃用信息。
 
 不是仅在弃用函数第一次调用时候发出警告，之后不再警告，而是该模块将在每个不同的调用地方第一次调用时发出警告，这使得它成为跨代码库提示用户废弃内容的理想选择。
 
@@ -34,21 +34,21 @@ var deprecate = require('depd')('my-module')
 
 ### deprecate(message)
 
-调用此函数以显示弃用消息。每个唯一的调用地方仅显示一次。调用地方是指堆栈中与此调函数调用者不同文件中的第一次调用。
+调用此函数以显示弃用信息。每个唯一的调用地方仅显示一次。调用地方是指堆栈中与此调函数调用者不同文件中的第一次调用。
 
-如果省略该消息参数 `message`，则会根据 `deprecate()` 的调用地方生成一个消息，将显示被调用函数的名字，类似于堆栈追踪中显示的名称。
+如果省略该信息参数 `message`，则会根据 `deprecate()` 的调用地方生成一个信息，将显示被调用函数的名字，类似于堆栈追踪中显示的名称。
 
 ### deprecate.function(fn, message)
 
-调用此函数以包装给定的弃用函数 `fn`，在任何该函数调用时显示弃用消息。可以传递可选消息 `message` 以提供自定义消息。
+调用此函数以包装给定的弃用函数 `fn`，在任何该函数调用时显示弃用信息。可以传递可选信息 `message` 以提供自定义信息。
 
 ### deprecate.property(obj, prop, message)
 
-调用此函数以包装给定对象 `obj` 的属性 `prop`，在任何访问或设置该属性时显示弃用消息。可以传递可选消息 `message` 以提供自定义消息。
+调用此函数以包装给定对象 `obj` 的属性 `prop`，在任何访问或设置该属性时显示弃用信息。可以传递可选信息 `message` 以提供自定义信息。
 
 此方法必须在属性所属的对象上调用（而非从原型继承）。
 
-如果属性是数据描述符，它将被转化为访问器描述符以显示弃用消息。
+如果属性是数据描述符，它将被转化为访问器描述符以显示弃用信息。
 
 ### process.on('deprecation', fn)
 
@@ -58,7 +58,7 @@ var deprecate = require('depd')('my-module')
 
 该错误对象表示弃用，并且使用相同的规则写入 STDERR 仅会触发一次。此错误对象具有以下属性：
 
-   - `message` - 库提供的消息
+   - `message` - 库提供的信息
    - `name` - 总是 `'DeprecationError'`
    - `namespace` - 弃用的名称空间
    - `stack` - 弃用的调用堆栈
@@ -90,13 +90,13 @@ $ NO_DEPRECATION=my-module,othermod node app.js
 
 ### process.env.TRACE_DEPRECATION
 
-作为被弃用模块的用户，环境变量 `TRACE_DEPRECATION` 提供一种通过包含整个调用堆栈记录来获取弃用消息中更多详细定位信息的解决方案。其格式类似于 `NO_DEPRECATION`：
+作为被弃用模块的用户，环境变量 `TRACE_DEPRECATION` 提供一种通过包含整个调用堆栈记录来获取弃用信息中更多详细定位信息的解决方案。其格式类似于 `NO_DEPRECATION`：
 
 ```sh
 $ TRACE_DEPRECATION=my-module,othermod node app.js
 ```
 
-这将包含 "my-module" 和 "othermod" 中被输出的弃用消息堆栈追踪。该值是逗号分隔的命名空间列表。追踪所有命名空间的警告，可以用 `*` 作为命名空间。
+这将包含 "my-module" 和 "othermod" 中被输出的弃用信息堆栈追踪。该值是逗号分隔的命名空间列表。追踪所有命名空间的警告，可以用 `*` 作为命名空间。
 
 向 `node` 可执行文件提供参数 `--trace-deprecation` 将追踪所有弃用（仅在 Node.js 0.8 或更高版本中可用）。
 
@@ -137,7 +137,7 @@ timestamp of message          namespace      |          |             location o
 
 ### 弃用对函数的所有调用
 
-将在 STDERR 中显示 "my-cool-module" 中有关被弃用函数 "oldfunction" 的弃用消息。（原文中 "my-module" 为笔误，以下示例代码中的命名空间均是 "my-cool-module"，已提 [pull request](https://github.com/dougwilson/nodejs-depd/pull/31)）
+将在 STDERR 中显示 "my-cool-module" 中有关被弃用函数 "oldfunction" 的弃用信息。（原文中 "my-module" 为笔误，以下示例代码中的命名空间均是 "my-cool-module"，已提 [pull request](https://github.com/dougwilson/nodejs-depd/pull/31)）
 
 ```js
 var deprecate = require('depd')('my-cool-module')
@@ -156,7 +156,7 @@ exports.oldfunction = deprecate.function(function () {
 
 ### 有条件的弃用函数调用
 
-当调用少于 2 个参数时候，将在 STDERR 中显示 "my-cool-module" 中有关被弃用函数 "weirdfunction" 的弃用消息。
+当调用少于 2 个参数时候，将在 STDERR 中显示 "my-cool-module" 中有关被弃用函数 "weirdfunction" 的弃用信息。
 
 ```js
 var deprecate = require('depd')('my-cool-module')
@@ -169,7 +169,7 @@ exports.weirdfunction = function () {
 }
 ```
 
-当 "deprecate" 作为函数调用时，模块内每个调用地方警告都会被统计，可以根据不同的情况显示不同的弃用消息，用户仍然会收到所有的警告：
+当 "deprecate" 作为函数调用时，模块内每个调用地方警告都会被统计，可以根据不同的情况显示不同的弃用信息，用户仍然会收到所有的警告：
 
 ```js
 var deprecate = require('depd')('my-cool-module')
@@ -187,7 +187,7 @@ exports.weirdfunction = function () {
 
 ### 弃用属性访问
 
-将在 STDERR 中显示 "my-cool-module" 中有关被弃用属性 "oldprop" 的弃用消息。当设置该值和获取该值时将显示弃用消息。
+将在 STDERR 中显示 "my-cool-module" 中有关被弃用属性 "oldprop" 的弃用信息。当设置该值和获取该值时将显示弃用信息。
 
 ```js
 var deprecate = require('depd')('my-cool-module')

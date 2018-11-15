@@ -2,7 +2,7 @@
 
 <img src="https://user-images.githubusercontent.com/71256/29091486-fa38524c-7c37-11e7-895f-e7ec8e1039b6.png" width="647">
 
-一个微型的 JavaScript 调试工具，以 Node.js 核心的调试技术为模型。适用于 Node.js 和 Web Browser。
+微型的 JavaScript 调试工具，以 Node.js 核心的调试技术为模型。适用于 Node.js 和 Web Browser。
 
 ## 安装
 

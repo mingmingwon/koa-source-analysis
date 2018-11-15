@@ -2,7 +2,7 @@
 
 [![浏览器支持情况](https://camo.githubusercontent.com/0524cf4e0849af89f8a8710c3ffc136301388412/68747470733a2f2f63692e746573746c696e672e636f6d2f6c6a686172622f69732d67656e657261746f722d66756e6374696f6e2e706e67)](https://ci.testling.com/ljharb/is-generator-function)
 
-判断函数是否为原生 generator 函数。
+判断是否为原生 generator 函数。
 
 ## 示例
 
