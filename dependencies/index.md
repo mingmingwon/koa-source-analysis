@@ -6,3 +6,4 @@
 - [koa-componse](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/koa-compose.md)：组装给定的中间件数组，返回组装后的中间件。
 - [koa-convert](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/koa-convert.md)：实现 generator 中间件和 promise 中间件相互转化。
 - [depd](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/depd.md)：显示弃用信息。
+- [cache-content-type](https://github.com/mingmingwon/koa-source-analysis/blob/master/cache-content-type/depd.md)：根据给定 MIME 类型或扩展名创建完整的 Content-Type 并缓存结果。
