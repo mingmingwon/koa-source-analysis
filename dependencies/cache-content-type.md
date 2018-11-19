@@ -2,13 +2,13 @@
 
 和 [mime-types](https://github.com/jshttp/mime-types) 的 contentType 方法相同，但缓存结果。
 
-### 安装
+## 安装
 
 ```sh
 npm i cache-content-type
 ```
 
-### 使用
+## 使用
 
 ```js
 const getType = require('cache-content-type');

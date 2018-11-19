@@ -4,7 +4,7 @@ HTTP 请求关闭、完成或出错时执行回调。
 
 ## 安装
 
-这是一个 [Node.js](https://nodejs.org/en/) 模块，可以通过 [npm registry](https://www.npmjs.com/) 获取。使用 [`npm install`](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 完成安装：
+这是一个 [Node.js](https://nodejs.org/en/) 模块，通过 [npm registry](https://www.npmjs.com/) 获取。使用 [`npm install`](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) 完成安装：
 
 ```sh
 $ npm install on-finished
