@@ -10,3 +10,4 @@
 - [statuses](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/statuses.md)：Node HTTP 状态工具，状态码和状态消息相互映射表。
 - [destroy](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/destroy.md)：销毁流，确保流被销毁。
 - [error-inject](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/error-inject.md)：注册流错误监听器。
+- [http-errors](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/http-errors.md)：创建 HTTP 错误。
