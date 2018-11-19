@@ -9,3 +9,4 @@
 - [cache-content-type](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/cache-content-type.md)：根据给定 MIME 类型或扩展名创建完整的 Content-Type 并缓存结果。
 - [statuses](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/statuses.md)：Node HTTP 状态工具，状态码和状态消息相互映射表。
 - [destroy](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/destroy.md)：销毁流，确保流被销毁。
+- [error-inject](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/error-inject.md)：注册流错误监听器。
