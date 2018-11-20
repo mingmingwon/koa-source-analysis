@@ -11,3 +11,4 @@
 - [destroy](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/destroy.md)：销毁流，确保流被销毁。
 - [error-inject](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/error-inject.md)：注册流错误监听器。
 - [http-errors](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/http-errors.md)：创建 HTTP 错误。
+- [escape-html](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/escape-html.md)：转义 HTML 字符串。
