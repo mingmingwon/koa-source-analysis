@@ -1,6 +1,6 @@
 ## cache-content-type <sup>[![Version Badge](http://versionbadg.es/node-modules/cache-content-type.svg)](https://www.npmjs.com/package/cache-content-type)</sup>
 
-和 [mime-types](https://github.com/jshttp/mime-types) 的 contentType 方法相同，但缓存结果。
+和 [mime-types](https://github.com/jshttp/mime-types) 库的 contentType 方法相同，但会缓存结果。
 
 ## 安装
 
