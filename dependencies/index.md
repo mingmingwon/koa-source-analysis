@@ -13,3 +13,4 @@
 - [http-errors](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/http-errors.md)：创建 HTTP 错误。
 - [escape-html](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/escape-html.md)：转义 HTML 字符串。
 - [vary] (https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/vary.md)：操作 HTTP vary 标头。
+- [only] (https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/only.md)：返回对象的白名单属性。
