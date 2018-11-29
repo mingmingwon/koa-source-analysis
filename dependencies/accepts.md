@@ -1,12 +1,12 @@
 ## accepts <sup>[![Version Badge](http://versionbadg.es/jshttp/accepts.svg)](https://www.npmjs.com/package/accepts)</sup>
 
-基于 [negotiator](https://www.npmjs.com/package/negotiator) 的高级内容协商。从 [koa](https://www.npmjs.com/package/koa) 中提取以供通用。
+基于 [negotiator](https://www.npmjs.com/package/negotiator) 库的高级内容协商。从 [koa](https://www.npmjs.com/package/koa) 中提取以供通用。
 
 对于 negotiator 补充，它允许：
 
-- 允许类型为数组和参数列表，例如 `(['text/html', 'application/json'])`，以及 `('text/html', 'application/json')`。
-- 允许使用类型缩写，例如 `json`。
-- 当类型匹配时返回 `false` 。
+- 类型为数组和参数列表，例如 `(['text/html', 'application/json'])`，以及 `('text/html', 'application/json')`。
+- 类型缩写，例如 `json`。
+- 当类型匹不配时返回 `false` 。
 - 将不存在的 headers 视为 `*`。
 
 ## 安装
@@ -55,7 +55,7 @@ var accepts = require('accepts')
 
 返回第一个接受的 type。如果 `types` 中没有 type 被接受，则返回 `false`。
 
-`types` 数组可以包含完整的 MIME 类型或文件扩展名。任何一个非完整的 MIME 类型将被传给 `require('mime-types').lookup` 方法转换。
+`types` 数组可以包含完整的 MIME 类型或文件扩展名。任何一个非完整的 MIME 类型将被传递给 `require('mime-types').lookup`。
 
 #### .types()
 
@@ -63,10 +63,9 @@ var accepts = require('accepts')
 
 ## 示例
 
-简单类型协商
+#### 简单类型协商
 
-这个简单的例子展示了如何使用 `accept` 根据客户端想接收的响应体来返回不同的类型的响应体。服务端按顺序列出其
-偏好，返回客户端和服务端的最佳匹配。
+这个简单的例子展示了如何使用 `accepts` 根据客户端想接收的响应体来返回不同的类型的响应体。服务端按顺序列出其偏好，返回客户端和服务端的最佳匹配。
 
 ```js
 var accepts = require('accepts')
