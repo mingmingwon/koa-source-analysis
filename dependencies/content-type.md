@@ -24,9 +24,9 @@ var obj = contentType.parse('image/svg+xml; charset=utf-8')
 
  - `type`：媒体类型（类型和子类型总是小写）。例如：`'image/svg+xml'`
 
- - `parameters`: 媒体类型中的参数对象（参数名总是小写）。例如：`{charset: 'utf-8'}`
+ - `parameters`：媒体类型中的参数对象（参数名总是小写）。例如：`{charset: 'utf-8'}`
 
-如果 `string` 丢失或无效，则抛出 `TypeError`。
+如果 `string` 缺失或无效，则抛出 `TypeError`。
 
 ### contentType.parse(req)
 
@@ -36,7 +36,7 @@ var obj = contentType.parse(req)
 
 从给定的 `req` 解析 `Content-Type` 标头，是 `contentType.parse(req.headers['content-type'])` 的简写。
 
-如果 `Content-Type` 标头丢失或无效，则抛出 `TypeError`。
+如果 `Content-Type` 标头缺失或无效，则抛出 `TypeError`。
 
 ### contentType.parse(res)
 
@@ -46,7 +46,7 @@ var obj = contentType.parse(res)
 
 从给定的 `res` 解析 `Content-Type` 标头，是 `contentType.parse(res.getHeader['content-type'])` 的简写。
 
-如果 `Content-Type` 标头丢失或无效，则抛出 `TypeError`。
+如果 `Content-Type` 标头缺失或无效，则抛出 `TypeError`。
 
 ### contentType.format(obj)
 
@@ -59,7 +59,7 @@ var str = contentType.format({
 
 将对象格式化为 `Content-Type` 标头。返回具有以下属性的给定对象的 `Content-Type` 字符串（以产出字符串 `'image/svg+xml; charset=utf-8'` 为例）：
 
- - `type`：媒体类型（将被转为小写）。例如： `'image/svg+xml'`
+ - `type`：媒体类型（将被转为小写）。例如：`'image/svg+xml'`
 
  - `parameters`：媒体类型中的参数对象（参数名将被转为小写）。例如：`{charset: 'utf-8'}`
 
