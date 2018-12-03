@@ -14,5 +14,6 @@
 - [escape-html](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/escape-html.md)：转义 HTML 字符串。
 - [vary](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/vary.md)：操作 HTTP vary 标头。
 - [only](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/only.md)：返回对象的白名单属性。
-- [type-is](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/type-is.md)：推断请求的 Content-Type。
+- [type-is](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/type-is.md)：推断请求的 Content-Type 标头。
 - [accepts](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/accepts.md)：HTTP 内容协商。
+- [content-type](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/content-type.md)：创建和解析 HTTP Content-Type 标头。
