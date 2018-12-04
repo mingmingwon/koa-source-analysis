@@ -17,3 +17,4 @@
 - [type-is](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/type-is.md)：推断请求的 Content-Type 标头。
 - [accepts](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/accepts.md)：HTTP 内容协商。
 - [content-type](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/content-type.md)：创建和解析 HTTP Content-Type 标头。
+- [parseurl](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/parseurl.md)：解析 URL 并缓存。
