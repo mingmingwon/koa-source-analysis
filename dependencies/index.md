@@ -19,3 +19,4 @@
 - [content-type](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/content-type.md)：创建和解析 HTTP Content-Type 标头。
 - [parseurl](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/parseurl.md)：解析 URL 并缓存。
 - [fresh](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/fresh.md)：HTTP 响应 freshness 测试。
+- [http-assert](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/http-assert.md)：HTTP 状态码断言。
