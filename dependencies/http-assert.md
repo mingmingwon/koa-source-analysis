@@ -1,6 +1,6 @@
 # http-assert <sup>[![Version Badge](http://versionbadg.es/jshttp/http-assert.svg)](https://www.npmjs.com/package/http-assert)</sup>
 
-状态码断言，类似于 Koa 中的 ctx.throw()，但有守护。
+HTTP 状态码断言，类似于 Koa 中的 ctx.throw()，但有守护。
 
 ## 安装
 
@@ -28,7 +28,7 @@ try {
 
 ## API
 
-此模块的 API 类似于 Node.js [`assert` ](https://nodejs.org/dist/latest/docs/api/assert.html) 模块。
+此模块的 API 类似于 Node.js [`assert`](https://nodejs.org/dist/latest/docs/api/assert.html) 模块。
 
 当断言失败时，每个函数都会从 [`http-errors`](https://www.npmjs.com/package/http-errors) 模块抛出一个 `HttpError` 实例。
 
