@@ -1,23 +1,23 @@
 # Koa 依赖模块
 
-- [is-generator-function](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/is-generator-function.md)：判断是否为 generator 函数。
-- [debug](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/debug.md)：调试工具，适用于 Node.js 和 Web Browser。
-- [on-finished](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/on-finished.md)：请求关闭、完成或出错时执行回调。
-- [koa-componse](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/koa-compose.md)：组装给定的中间件数组，返回组装后的中间件。
-- [koa-convert](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/koa-convert.md)：实现 generator 中间件和 promise 中间件相互转化。
-- [depd](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/depd.md)：显示弃用信息。
+- [accepts](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/accepts.md)：HTTP 内容协商。
 - [cache-content-type](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/cache-content-type.md)：根据给定 MIME 类型或扩展名创建完整的 Content-Type 并缓存结果。
-- [statuses](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/statuses.md)：Node HTTP 状态工具，状态码和状态消息相互映射表。
+- [content-type](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/content-type.md)：创建和解析 HTTP Content-Type 标头。
+- [cookies](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/cookies.md)：基于 Keygrip 的 cookies。
+- [debug](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/debug.md)：调试工具，适用于 Node.js 和 Web Browser。
+- [depd](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/depd.md)：显示弃用信息。
 - [destroy](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/destroy.md)：销毁流，确保流被销毁。
 - [error-inject](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/error-inject.md)：注册流错误监听器。
-- [http-errors](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/http-errors.md)：创建 HTTP 错误。
 - [escape-html](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/escape-html.md)：转义 HTML 字符串。
-- [vary](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/vary.md)：操作 HTTP vary 标头。
-- [only](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/only.md)：返回对象的白名单属性。
-- [type-is](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/type-is.md)：推断请求的 Content-Type 标头。
-- [accepts](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/accepts.md)：HTTP 内容协商。
-- [content-type](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/content-type.md)：创建和解析 HTTP Content-Type 标头。
-- [parseurl](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/parseurl.md)：解析 URL 并缓存。
 - [fresh](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/fresh.md)：HTTP 响应 freshness 测试。
 - [http-assert](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/http-assert.md)：HTTP 状态码断言。
-- [cookies](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/cookies.md)：基于 Keygrip 的 cookies。
+- [http-errors](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/http-errors.md)：创建 HTTP 错误。
+- [is-generator-function](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/is-generator-function.md)：判断是否为 generator 函数。
+- [koa-componse](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/koa-compose.md)：组装给定的中间件数组，返回组装后的中间件。
+- [koa-convert](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/koa-convert.md)：实现 generator 中间件和 promise 中间件相互转化。
+- [on-finished](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/on-finished.md)：请求关闭、完成或出错时执行回调。
+- [only](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/only.md)：返回对象的白名单属性。
+- [parseurl](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/parseurl.md)：解析 URL 并缓存。
+- [statuses](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/statuses.md)：Node HTTP 状态工具，状态码和状态消息相互映射表。
+- [type-is](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/type-is.md)：推断请求的 Content-Type 标头。
+- [vary](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/vary.md)：操作 HTTP vary 标头。
