@@ -3,7 +3,7 @@
 - [accepts](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/accepts.md)：HTTP 内容协商。
 - [cache-content-type](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/cache-content-type.md)：根据给定 MIME 类型或扩展名创建完整的 Content-Type 并缓存结果。
 - [content-type](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/content-type.md)：创建和解析 HTTP Content-Type 标头。
-- [cookies](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/cookies.md)：基于 Keygrip 的 cookies。
+- [cookies](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/cookies.md)：基于 Keygrip 的签名和非签名 cookies。
 - [debug](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/debug.md)：调试工具，适用于 Node.js 和 Web Browser。
 - [depd](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/depd.md)：显示弃用信息。
 - [destroy](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/destroy.md)：销毁流，确保流被销毁。

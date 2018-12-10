@@ -18,7 +18,7 @@ $ npm install cookies
 
 * **隐蔽性**：签名 cookie 的存储方式与未签名 cookie 的相同，而不是以模糊的签名格式存储。使用标准命名约定（cookie-name`.sig`）为每个签名的 cookie 存储额外的签名 cookie。这样可以允许其他库访问原始 cookie 而无需知道签名机制。
 
-* **扩展性**：该库专门为使用 [Keygrip](https://www.npmjs.com/package/keygrip) 而优化，但并非必须依赖它；如果愿意，可以实现自己的签名方案，并且仅使用此库来读取/写入 cookie。将签名保存到单独的库中以实现代码重用，并可以将相同的签名库用于需要签名的其他区域，例如 URL。
+* **扩展性**：该库专门为使用 [Keygrip](https://www.npmjs.com/package/keygrip) 而优化，但并非必须依赖它；如果愿意，可以实现自己的签名方案，并且仅使用此库来读取/写入 cookie。将签名保存到单独的库中以实现代码重用，并可以将相同的签名库用于其他需要签名的地方，例如 URL。
 
 ## API
 
@@ -50,7 +50,7 @@ $ npm install cookies
 
 ### cookies.set( name, [ value ], [ options ] )
 
-这将在响应中设置给定的 cookie 并返回当前上下文以允许链式调用。
+这将在响应中设置给定的 cookie， 并返回当前上下文以允许链式调用。
 
 如果省略 value，则使用具有过期日期的标头来删除 cookie。
 
@@ -61,8 +61,8 @@ $ npm install cookies
 * `path`：表示 cookie 路径的字符串（默认为 `/`）。
 * `domain`：表示 cookie 域的字符串（无默认值）。
 * `secure`：布尔值，表示 cookie 是否仅通过 HTTPS 发送（HTTP 默认为 `false`，HTTPS 默认为 `true`）。阅读有关此选项的[更多信息](＃secure-cookies)。
-* `httpOnly`：布尔值，表示 cookie 是仅通过 HTTP(s) 发送，不可用于客户端 JavaScript（默认为 `true`）。
-* `sameSite`：布尔值或字符串，表示 cookie 是否是“同一站点” cookie（默认为 `false`）。 这可以设置为`'strict'`, `'lax'` 或 `true`（映射为 `'strict'`）。
+* `httpOnly`：布尔值，表示 cookie 是仅通过 HTTP(s) 发送，客户端 JavaScript 不可用（默认为 `true`）。
+* `sameSite`：布尔值或字符串，表示 cookie 是否为“同一站点”的 cookie（默认为 `false`）。可以设置为`'strict'`, `'lax'` 或 `true`（映射到 `'strict'`）。
 * `signed`：布尔值，表示是否要对 cookie 进行签名（默认为 `false`）。如果为 true，那么另一个以 `.sig` 为后缀的同名 cookie 也将被发送，其中 27 字节的安全网址 base64 SHA1 值代表 cookie-name=cookie-value 的哈希值，对应第一个 [ Keygrip](https://www.npmjs.com/package/keygrip) 秘钥。此签名密钥用于在下次收到 cookie 时检测是否被篡改。
 * `overwrite`：布尔值，表示是否覆盖以前设置的同名 cookie（默认为 `false`）。如果为 true，则在设置此 cookie 时，将在 Set-Cookie 标头中过滤掉在相同请求期间设置的所有（无论路径或域）同名的 cookie。
 
@@ -77,9 +77,9 @@ HTTPS 是安全 cookie 的必要条件。当使用 `secure: true` 调用 `cookie
 * 如果请求的 `protocol` 属性设置为 `https`
 * 如果请求的 `connection.encrypted` 属性设置为 `true`。
 
-如果服务器使用代理并且使用 `secure: true`，则需要将服务器配置为读取代理添加的请求标头，以确定请求是否使用安全连接。
+如果服务端经过代理并且使用 `secure: true`，则需要将服务器配置为读取代理添加的请求标头，以确定请求是否使用安全连接。
 
-有关在代理服务的更多信息，请参阅使用的框架：
+有关代理服务的更多信息，请参阅您使用的框架：
 
 * Koa - [`app.proxy = true`](http://koajs.com/#settings)
 * Express - [信任代理配置](http://expressjs.com/en/4x/api.html#trust.proxy.options.table)
