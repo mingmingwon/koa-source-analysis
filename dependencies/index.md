@@ -5,6 +5,7 @@
 - [content-type](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/content-type.md)：创建和解析 HTTP Content-Type 标头。
 - [cookies](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/cookies.md)：基于 Keygrip 的签名和非签名 cookies。
 - [debug](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/debug.md)：调试工具，适用于 Node.js 和 Web Browser。
+- [delegates](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/delegates.md)：对象方法和访问器代理。
 - [depd](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/depd.md)：显示弃用信息。
 - [destroy](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/destroy.md)：销毁流，确保流被销毁。
 - [error-inject](https://github.com/mingmingwon/koa-source-analysis/blob/master/dependencies/error-inject.md)：注册流错误监听器。
