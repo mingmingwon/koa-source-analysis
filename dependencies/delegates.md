@@ -1,6 +1,6 @@
 # delegates <sup>[![Version Badge](http://versionbadg.es/tj/node-delegates.svg)](https://www.npmjs.com/package/delegates)</sup>
 
-Node 方法和访问器代理工具。
+对象方法和访问器代理。
 
 ## 安装
 
@@ -47,11 +47,11 @@ delegate(proto, 'request')
 
 ## Delegate(proto, prop)
 
-创建一个代理器实例，用于配置给定 `proto` 对象（通常是原型）的 `prop` 属性。
+创建一个代理器实例，用于配置给定 `proto` 对象（通常是原型对象）的 `prop` 属性。
 
 ## Delegate.auto(proto, targetProto, targetProp)
 
-将 targetProto 的 getter，setter，values 和方法代理到 proto 。假设 targetProto 对象存在于 proto 对象下且具有 targetProp 属性。
+将 getter，setter，values 和方法从 targetProto 代理到 proto 。假设 targetProto 对象属于 proto 对象且具有 targetProp 属性。
 
 ## Delegate#method(name)
 
